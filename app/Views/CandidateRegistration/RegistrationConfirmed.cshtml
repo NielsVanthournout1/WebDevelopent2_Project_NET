@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Registratie Bevestigd";
+    Layout = "_MobileLayout";
+}
+
+<div class="mobile-page text-center">
+    <div class="my-5">
+        <div class="mb-4">
+            <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem;"></i>
+        </div>
+
+        <h2 class="mb-3">Registratie Succesvol!</h2>
+
+        @if (ViewBag.CandidateName != null)
+        {
+            <p class="lead mb-2">De interesse van <strong>@ViewBag.CandidateName</strong> is succesvol geregistreerd.</p>
+        }
+        else
+        {
+            <p class="lead mb-2">De registratie is succesvol voltooid.</p>
+        }
+
+        <p class="mb-4">Je wordt automatisch doorgestuurd naar de scan pagina.</p>
+
+        <div class="d-grid gap-2 col-10 mx-auto">
+            <a href="/CandidateRegistration/ScanQR" class="btn btn-primary btn-lg">
+                Nieuwe QR scannen
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        console.log("Registration confirmed page loaded");
+        // Automatically go back to scan page after 5 seconds
+        setTimeout(function() {
+            window.location.href = '/CandidateRegistration/ScanQR';
+        }, 5000);
+    </script>
+}

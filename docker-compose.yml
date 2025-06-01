@@ -1,0 +1,23 @@
+services:
+  dotnet-db:
+    container_name: dotnet-db
+    image: mariadb
+    ports:
+     - 3307:3306
+    volumes:
+     - ./db/config:/var/lib/mysql
+    environment:
+     - MARIADB_ROOT_PASSWORD=root
+     - MARIADB_DATABASE=SID_in_beurzen
+     - TZ=Europe/Brussels
+    restart: unless-stopped
+  dotnet-dbadmin:
+    container_name: dotnet-dbadmin
+    image: phpmyadmin
+    ports:
+     - 81:80
+    environment:
+     - PMA_HOST=dotnet-db
+    depends_on:
+     - dotnet-db
+    restart: unless-stopped

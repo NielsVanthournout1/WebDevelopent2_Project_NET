@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Gebruiker Aangemaakt";
+}
+
+<div class="container">
+    <div class="alert alert-success">
+        <h4 class="alert-heading">@ViewBag.SuccessMessage</h4>
+        <p>De gebruiker moet de onderstaande link gebruiken om de registratie te voltooien en een wachtwoord in te stellen:</p>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            Registratie Link
+        </div>
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="registrationLink" value="@ViewBag.RegistrationLink" readonly>
+                <button class="btn btn-outline-secondary" type="button" id="copyButton" onclick="copyLink()">Kopiëren</button>
+            </div>
+            <small class="text-muted">Deze link kan worden gebruikt om de registratie te voltooien en een wachtwoord in te stellen.</small>
+            <div class="alert alert-info mt-3">
+                <i class="bi bi-info-circle"></i> De registratielink is ook naar de console gelogd. Open de browser console (F12) en zoek naar "REGISTRATION LINK".
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="UserManagement" class="btn btn-primary">Terug naar Gebruikersbeheer</a>
+    </div>
+</div>
+
+<script>
+    // More visible console logging
+    console.log("====================");
+    console.log("REGISTRATION LINK: @ViewBag.RegistrationLink");
+    console.log("====================");
+    
+    // Also display on page for easier access
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("Page loaded, registration link: @ViewBag.RegistrationLink");
+    });
+
+    function copyLink() {
+        var copyText = document.getElementById("registrationLink");
+        copyText.select();
+        document.execCommand("copy");
+
+        var copyButton = document.getElementById("copyButton");
+        copyButton.innerHTML = "Gekopieerd!";
+        setTimeout(function() {
+            copyButton.innerHTML = "Kopiëren";
+        }, 2000);
+        
+        // Log again when copied
+        console.log("Copied link: " + copyText.value);
+    }
+</script>

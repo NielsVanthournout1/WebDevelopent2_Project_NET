@@ -1,0 +1,76 @@
+/* Mobile-specific styles */
+.mobile-body {
+    font-size: 16px;
+    background-color: #f8f9fa;
+    padding-bottom: 70px; /* Space for fixed footer */
+}
+
+.mobile-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 15px;
+}
+
+.mobile-logo {
+    max-height: 40px;
+}
+
+.mobile-container {
+    padding: 15px;
+    max-width: 100%;
+}
+
+.mobile-page {
+    padding-bottom: 20px;
+}
+
+.mobile-footer {
+    background-color: #fff;
+    border-top: 1px solid #dee2e6;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Form specific styles */
+.form-label {
+    margin-bottom: 0.25rem;
+}
+
+.programs-list {
+    background-color: #fff;
+}
+
+.form-check {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.form-check:last-child {
+    border-bottom: none;
+}
+
+/* Card styles */
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 0.75rem 1rem;
+}
+
+/* Button styles */
+.btn {
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+}
+
+.btn-lg {
+    font-size: 1.1rem;
+    font-weight: 500;
+}

@@ -1,0 +1,172 @@
+@using System.Text.Encodings.Web
+@{
+    ViewData["Title"] = "Studiekiezer Aangemaakt";
+}
+
+<div class="container">
+    <h1>Studiekiezer Aangemaakt</h1>
+
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.SuccessMessage
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Studiekiezer Gegevens</h5>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.Candidate != null)
+                    {
+                        <p><strong>ID:</strong> @ViewBag.Candidate.CandidateId</p>
+                        <p><strong>Naam:</strong> @ViewBag.Candidate.GivenName @ViewBag.Candidate.Surname</p>
+                        <p><strong>Geboortedatum:</strong> @(ViewBag.Candidate.BirthDate?.ToString("dd-MM-yyyy"))</p>
+                        <p><strong>Onderwijsinstelling:</strong> @ViewBag.Candidate.Institution</p>
+                        <p><strong>Studiegebied:</strong> @ViewBag.Candidate.FieldOfStudy</p>
+                        <p><strong>QR code token:</strong> @ViewBag.Candidate.QrcodeLink</p>
+                    }
+                    else
+                    {
+                        <p class="text-danger">Er is een fout opgetreden bij het ophalen van kandidaat informatie.</p>
+                    }
+                </div>
+            </div>
+
+            @if (ViewBag.QrCodeUrl != null)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">QR Code</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <div id="qrcode"></div>
+                        <p class="mt-3">
+                            <a href="@ViewBag.QrCodeUrl" target="_blank">@ViewBag.QrCodeUrl</a>
+                        </p>
+                        <div class="mt-3">
+                            <button onclick="printQRCode()" class="btn btn-primary">
+                                <i class="bi bi-printer"></i> Afdrukken
+                            </button>
+                            <button onclick="testQRCode()" class="btn btn-info">
+                                <i class="bi bi-link"></i> URL Testen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    QR code URL kon niet worden gegenereerd.
+                </div>
+            }
+
+            <div class="mt-4">
+                <a href="/Admin/CandidateManagement" class="btn btn-outline-secondary">Terug naar Overzicht</a>
+                <a href="/Admin/CreateCandidate" class="btn btn-primary">Nieuwe Studiekiezer Aanmaken</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Document loaded, checking for QR code elements");
+
+            // Check if QR code element exists and URL is available
+            var qrcodeDiv = document.getElementById('qrcode');
+            var qrUrl = '@Html.Raw(JavaScriptEncoder.Default.Encode(ViewBag.QrCodeUrl?.ToString() ?? ""))';
+
+            if (qrcodeDiv && qrUrl) {
+                console.log("Generating QR code for URL:", qrUrl);
+
+                try {
+                    // Generate QR code
+                    new QRCode(qrcodeDiv, {
+                        text: qrUrl,
+                        width: 256,
+                        height: 256,
+                        colorDark: '#000',
+                        colorLight: '#fff',
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+
+                    console.log("QR code generation completed");
+                } catch (error) {
+                    console.error("Error generating QR code:", error);
+                    qrcodeDiv.innerHTML = '<div class="alert alert-danger">Fout bij het genereren van QR code: ' + error.message + '</div>';
+                }
+            } else {
+                console.error("QR code container or URL not found", {
+                    qrcodeDiv: qrcodeDiv,
+                    qrUrl: qrUrl
+                });
+
+                if (qrcodeDiv) {
+                    qrcodeDiv.innerHTML = '<div class="alert alert-danger">Kon geen QR code genereren - URL ontbreekt</div>';
+                }
+            }
+        });
+
+        function printQRCode() {
+            try {
+                const printContent = document.getElementById('qrcode').innerHTML;
+                const url = '@Html.Raw(JavaScriptEncoder.Default.Encode(ViewBag.QrCodeUrl?.ToString() ?? ""))';
+                const candidateName = '@(ViewBag.Candidate?.GivenName) @(ViewBag.Candidate?.Surname)';
+                const candidateId = '@(ViewBag.Candidate?.CandidateId)';
+
+                const printWindow = window.open('', '_blank');
+                printWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>QR Code - Studiekiezer ${candidateName}</title>
+                        <style>
+                            body { text-align: center; font-family: Arial, sans-serif; }
+                            .container { margin: 20px auto; max-width: 300px; }
+                            .info { margin-bottom: 15px; }
+                            .url { margin-top: 15px; word-break: break-all; font-size: 12px; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <div class="info">
+                                <h2>${candidateName}</h2>
+                                <p>ID: ${candidateId}</p>
+                            </div>
+                            ${printContent}
+                            <div class="url">${url}</div>
+                        </div>
+                    </body>
+                    </html>
+                `);
+
+                printWindow.document.close();
+                printWindow.focus();
+
+                // Wait a moment for images to load
+                setTimeout(() => {
+                    printWindow.print();
+                }, 500);
+            } catch (error) {
+                console.error("Error printing QR code:", error);
+                alert("Er is een fout opgetreden bij het afdrukken van de QR code: " + error.message);
+            }
+        }
+
+        function testQRCode() {
+            const url = '@Html.Raw(JavaScriptEncoder.Default.Encode(ViewBag.QrCodeUrl?.ToString() ?? ""))';
+            if (url) {
+                window.open(url, '_blank');
+            } else {
+                alert("QR code URL is niet beschikbaar om te testen.");
+            }
+        }
+    </script>
+}

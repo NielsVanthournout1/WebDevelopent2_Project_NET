@@ -1,0 +1,46 @@
+/* Custom Navbar Styles */
+.custom-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+    .custom-header .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #258cfb;
+        text-decoration: none;
+    }
+
+    .custom-header nav .btn-link {
+        color: #333;
+        font-weight: 500;
+        margin-right: 0.5rem;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+        .custom-header nav .btn-link:hover,
+        .custom-header nav .btn-link.active {
+            color: #258cfb;
+            text-decoration: underline;
+        }
+
+    .custom-header nav .btn-outline-danger {
+        margin-left: 1rem;
+    }
+
+    .custom-header .text-dark {
+        font-weight: 500;
+    }
+
+@media (max-width: 768px) {
+    .custom-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav {
+        margin-top: 0.5rem;
+    }
+}

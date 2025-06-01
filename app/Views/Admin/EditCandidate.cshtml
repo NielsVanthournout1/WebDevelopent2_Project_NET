@@ -1,0 +1,75 @@
+@model app.Models.EditCandidateViewModel
+@{
+    ViewData["Title"] = "Studiekiezer Bewerken";
+}
+
+<div class="container">
+    <h1>Studiekiezer Bewerken</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <!-- Changed to direct action URL -->
+                    <form action="/Admin/EditCandidate/@Model.CandidateId" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="text-danger">@Html.ValidationSummary()</div>
+
+                        <input type="hidden" name="CandidateId" value="@Model.CandidateId" />
+                        <input type="hidden" name="QrcodeLink" value="@Model.QrcodeLink" />
+
+                        <div class="mb-3">
+                            <label for="GivenName" class="form-label">Voornaam</label>
+                            <input type="text" id="GivenName" name="GivenName" class="form-control"
+                                   value="@Model.GivenName" placeholder="Voer voornaam in" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Surname" class="form-label">Achternaam</label>
+                            <input type="text" id="Surname" name="Surname" class="form-control"
+                                   value="@Model.Surname" placeholder="Voer achternaam in" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="BirthDate" class="form-label">Geboortedatum</label>
+                            <input type="date" id="BirthDate" name="BirthDate" class="form-control"
+                                   value="@(Model.BirthDate?.ToString("yyyy-MM-dd"))" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Institution" class="form-label">Huidige onderwijsinstelling</label>
+                            <input type="text" id="Institution" name="Institution" class="form-control"
+                                   value="@Model.Institution" placeholder="Bijv. Hogeschool Gent" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="FieldOfStudy" class="form-label">Huidig studiegebied</label>
+                            <input type="text" id="FieldOfStudy" name="FieldOfStudy" class="form-control"
+                                   value="@Model.FieldOfStudy" placeholder="Bijv. Informatica" required />
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="/Admin/CandidateManagement" class="btn btn-outline-secondary">Annuleren</a>
+                            <button type="submit" class="btn btn-primary">Opslaan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Add debugging to check form values
+        $(document).ready(function() {
+            console.log("Form loaded with candidate ID: @Model.CandidateId");
+            console.log("GivenName:", "@Model.GivenName");
+            console.log("Surname:", "@Model.Surname");
+            console.log("BirthDate:", "@(Model.BirthDate?.ToString("yyyy-MM-dd"))");
+            console.log("Institution:", "@Model.Institution");
+            console.log("FieldOfStudy:", "@Model.FieldOfStudy");
+        });
+    </script>
+}

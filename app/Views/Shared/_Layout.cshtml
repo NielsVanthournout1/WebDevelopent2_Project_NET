@@ -1,0 +1,137 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    var email = HttpContextAccessor.HttpContext.Session.GetString("GebruikerEmail");
+    var rol = HttpContextAccessor.HttpContext.Session.GetString("GebruikerRol");
+    
+    // Ensure role is actually a number and not null or empty
+    var isValidRole = !string.IsNullOrEmpty(rol) && int.TryParse(rol, out int roleId);
+    
+    // Add clear debug output to help troubleshoot
+    var debugInfo = $"Email: {email ?? "null"}, Role: {rol ?? "null"}, Valid: {isValidRole}";
+}
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SIDinBeurs</title>
+    <!-- Force no cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SIDinBeurs.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="custom-header bg-light border-bottom mb-3">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between py-2">
+            <a class="navbar-brand fw-bold" href="/">SIDinBeurs</a>
+            <nav id="main-navigation">
+                <a href="/" class="btn btn-link">Home</a>
+                @if (email != null && isValidRole)
+                {
+                    <!-- Debug info: @debugInfo -->
+                    
+                    @if (rol == "1") // Administrator
+                    {
+                        <div class="btn-group" id="admin-menu">
+                            <a href="/Admin/UserManagement" class="btn btn-link">
+                                <i class="bi bi-people"></i> Gebruikersbeheer
+                            </a>
+                            <a href="/Admin/CandidateManagement" class="btn btn-link">
+                                <i class="bi bi-person-badge"></i> Studiekiezers
+                            </a>
+                        </div>
+                    }
+                    else if (rol == "2") // Marketing Team Lead
+                    {
+                        <div class="btn-group" id="lead-menu">
+                            <a href="/Dashboard" class="btn btn-link">
+                                <i class="bi bi-graph-up"></i> Dashboard
+                            </a>
+                            <a href="/Dashboard/Statistics" class="btn btn-link">
+                                <i class="bi bi-bar-chart"></i> Statistieken
+                            </a>
+                            <a href="/Dashboard/Candidates" class="btn btn-link">
+                                <i class="bi bi-person-gear"></i> Kandidaten Beheren
+                            </a>
+                        </div>
+                    }
+                    else if (rol == "3") // Marketing Medewerker
+                    {
+                        <div class="btn-group" id="marketing-menu">
+                            <a href="/Dashboard" class="btn btn-link">
+                                <i class="bi bi-graph-up"></i> Dashboard
+                            </a>
+                            <a href="/Dashboard/Statistics" class="btn btn-link">
+                                <i class="bi bi-bar-chart"></i> Statistieken
+                            </a>
+                        </div>
+                    }
+                    else if (rol == "4") // Beursexposant
+                    {
+                        <a href="#" class="btn btn-link" onclick="scanQR()" id="exposant-menu">
+                            <i class="bi bi-qr-code-scan"></i> QR Scannen
+                        </a>
+                    }
+                    <span class="ms-2 me-2 text-dark">@email</span>
+                    <a href="/Account/Logout" class="btn btn-outline-danger">Uitloggen</a>
+                }
+                else
+                {
+                    <a href="/Account/Login" class="btn btn-primary">Inloggen</a>
+                }
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container">
+            &copy; @DateTime.Now.Year - SIDinBeurs - <a href="/Home/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    
+    @if (isValidRole && rol == "4") @* Only for Beursexposant *@
+    {
+        <script>
+            function scanQR() {
+                window.location.href = '/CandidateRegistration/ScanQR';
+            }
+        </script>
+    }
+
+    <script>
+        // Add detection for any unauthorized menu items that might have been injected
+        document.addEventListener('DOMContentLoaded', function() {
+            // Log all navigation links to help troubleshoot
+            console.log('Navigation menu contents:');
+            var navLinks = document.querySelectorAll('#main-navigation a');
+            navLinks.forEach(function(link) {
+                console.log('Link:', link.textContent.trim(), 'URL:', link.href);
+                
+                // Remove any links containing "Gebruikers Overzicht" or "kieze Overzicht"
+                if (link.textContent.includes('Gebruikers Overzicht') || 
+                    link.textContent.includes('kieze Overzicht')) {
+                    console.log('Removing unauthorized link:', link.textContent);
+                    link.remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+@model app.Models.CandidateListViewModel
+@{
+    ViewData["Title"] = "Studiekiezers Beheren";
+    var userRole = Context.Session.GetString("GebruikerRol");
+    var userEmail = Context.Session.GetString("GebruikerEmail");
+    var userHasAdminRole = userRole == "1";
+}
+
+<div class="container">
+    <h1>Studiekiezersbeheer</h1>
+
+    @if (!userHasAdminRole)
+    {
+        <div class="alert alert-warning">
+            <strong>Let op:</strong> Je hebt niet de juiste rechten om studiekiezers te beheren (Rol: @userRole). 
+            Sommige functies werken mogelijk niet.
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info d-none" id="debug-info">
+            <strong>Debug Info:</strong> 
+            <p>User Email: @userEmail</p>
+            <p>User Role: @userRole</p>
+        </div>
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <div class="mb-3">
+        <a href="/Admin/CreateCandidate" class="btn btn-primary">
+            <i class="bi bi-person-plus"></i> Nieuwe Studiekiezer
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Voornaam</th>
+                            <th>Achternaam</th>
+                            <th>Geboortedatum</th>
+                            <th>Onderwijsinstelling</th>
+                            <th>Studiegebied</th>
+                            <th>QR Code</th>
+                            <th>Acties</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var candidate in Model.Candidates)
+                        {
+                            <tr>
+                                <td>@candidate.CandidateId</td>
+                                <td>@candidate.GivenName</td>
+                                <td>@candidate.Surname</td>
+                                <td>@(candidate.BirthDate?.ToString("dd-MM-yyyy") ?? "-")</td>
+                                <td>@(candidate.Institution ?? "-")</td>
+                                <td>@(candidate.FieldOfStudy ?? "-")</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(candidate.QrcodeLink))
+                                    {
+                                        <button type="button" class="btn btn-sm btn-info" onclick="showQRCode('@candidate.QrcodeLink')">
+                                            <i class="bi bi-qr-code"></i> QR code
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">Geen QR code</span>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="/Admin/EditCandidate/@candidate.CandidateId" class="btn btn-sm btn-primary">
+                                            <i class="bi bi-pencil"></i> Bewerken
+                                        </a>
+                                        <form action="/Admin/DeleteCandidate" method="post" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@candidate.CandidateId" />
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Weet je zeker dat je deze studiekiezer wilt verwijderen?');">
+                                                <i class="bi bi-trash"></i> Verwijderen
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QR Code Modal -->
+<div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="qrCodeModalLabel">QR Code</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <div id="qrcode-container"></div>
+                <p class="mt-3">URL: <a id="qrcode-url" href="#" target="_blank"></a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluiten</button>
+                <a id="print-link" href="#" target="_blank" class="btn btn-primary">Afdrukken</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        // Single line assignments and simple logic to avoid issues
+        document.addEventListener("DOMContentLoaded", function() { console.log("Page loaded"); });
+
+        function showQRCode(token) {
+            var baseUrl = window.location.origin;
+            var qrUrl = baseUrl + "/registration/" + token;
+
+            // Clear container
+            document.getElementById("qrcode-container").innerHTML = "";
+
+            // Create QR code
+            new QRCode(document.getElementById("qrcode-container"), {
+                text: qrUrl,
+                width: 256,
+                height: 256,
+                colorDark: "#000",
+                colorLight: "#fff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            // Update URL
+            var urlLink = document.getElementById("qrcode-url");
+            urlLink.href = qrUrl;
+            urlLink.textContent = qrUrl;
+
+            // Update print link
+            document.getElementById("print-link").href = qrUrl;
+
+            // Show modal
+            new bootstrap.Modal(document.getElementById("qrCodeModal")).show();
+        }
+
+        // Debug code for button clicks
+        document.addEventListener("DOMContentLoaded", function() { 
+            console.log("Page loaded"); 
+            
+            // Log session info
+            console.log("User Role: @userRole");
+            console.log("User Email: @userEmail");
+            
+            // Debug nieuwe studiekiezer button
+            var nieuweBtn = document.getElementById("nieuwe-studiekiezer-btn");
+            if (nieuweBtn) {
+                nieuweBtn.addEventListener("click", function(e) {
+                    console.log("Nieuwe studiekiezer button clicked");
+                    // Allow the default navigation to happen
+                });
+            }
+            
+            // Toggle debug info
+            document.addEventListener("keydown", function(e) {
+                if (e.ctrlKey && e.shiftKey && e.code === "KeyD") {
+                    var debugInfo = document.getElementById("debug-info");
+                    if (debugInfo) {
+                        debugInfo.classList.toggle("d-none");
+                    }
+                }
+            });
+        });
+        
+        // Function to check session before navigation
+        function checkSessionBeforeNavigate(e, url) {
+            console.log("Navigating to: " + url);
+            
+            // You could add an AJAX check here if needed
+            // For now, just log and proceed
+            return true;
+        }
+    </script>
+}

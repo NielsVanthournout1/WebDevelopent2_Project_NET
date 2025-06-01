@@ -1,0 +1,68 @@
+[
+  {
+    "ContainingType": "app.Controllers.Api.StatisticsController",
+    "Method": "GetLeastPopularProgram",
+    "RelativePath": "api/statistics/least-popular-program",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "app.Models.Api.ProgramStatisticsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "app.Controllers.Api.StatisticsController",
+    "Method": "GetMostPopularProgram",
+    "RelativePath": "api/statistics/most-popular-program",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "app.Models.Api.ProgramStatisticsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "app.Controllers.Api.StatisticsController",
+    "Method": "GetTradeShowCandidateCount",
+    "RelativePath": "api/statistics/tradeshow/{id}/total-candidates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "app.Models.Api.TradeShowStatisticsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

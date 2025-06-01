@@ -1,0 +1,47 @@
+﻿@model app.Models.HomeViewModel
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Home Page";
+    var debugEmail = HttpContextAccessor.HttpContext.Session.GetString("GebruikerEmail");
+    var debugRole = HttpContextAccessor.HttpContext.Session.GetString("GebruikerRol");
+}
+<div class="container">
+    <h1>Welkom bij SIDinBeurs!</h1>
+    <p>Dit is de startpagina van de SidInBeurs</p>
+    
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <div class="mt-4 mb-4">
+            @if (Model.DatabaseConnected)
+            {
+                <div class="alert alert-success">
+                    <strong>Database status:</strong> @Model.DatabaseMessage
+                    <hr>
+                    <p>
+                        <strong>Accounts:</strong> @Model.AccountCount<br>
+                        <strong>Roles:</strong> @Model.RoleCount
+                    </p>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    <strong>Database status:</strong> @Model.DatabaseMessage
+                    <hr>
+                    <p>De applicatie kan geen verbinding maken met de database. Controleer de configuratie.</p>
+                </div>
+            }
+        </div>
+    }
+    
+    <div class="alert alert-info">
+        <strong>Debug Info:</strong><br />
+        Email: @debugEmail<br />
+        Role: @debugRole
+    </div>
+
+    <img src="~/Images/foto_SID_Beurs.jpg" class="img-fluid" style="max-width: 100%;" alt="SID Beurs" />
+</div>

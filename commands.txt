@@ -1,0 +1,16 @@
+build docker:
+docker-compose up -d
+
+scaffold database:
+Scaffold-DbContext "server=localhost;port=3307;uid=root;pwd=root;database=SID_in_beurzen" MySql.EntityFrameworkCore -OutputDir SID_in_beurzen -f
+
+	
+admin@admin.com
+psw: Admin
+
+lead@test.com
+marketing@test.com
+exposant@test.com
+psw: Test123
+
+
