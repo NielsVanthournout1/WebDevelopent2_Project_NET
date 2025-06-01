@@ -278,3 +278,8 @@ C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\bin
 C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.Design.dll
 C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Niels\Documents\jaar2\semister 2\Web development 2\Project_.NET\app\obj\Debug\net8.0\app.sourcelink.json

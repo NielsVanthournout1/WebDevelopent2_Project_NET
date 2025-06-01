@@ -1,0 +1,153 @@
+@model app.Models.CandidateEditViewModel
+@{
+    ViewData["Title"] = "Kandidaat Bewerken";
+    var isAuthorized = Context.Session.GetString("GebruikerRol") == "1" || Context.Session.GetString("GebruikerRol") == "2";
+}
+
+@if (!isAuthorized)
+{
+    <div class="container mt-5">
+        <div class="alert alert-danger">
+            <h4><i class="bi bi-exclamation-triangle"></i> Toegang geweigerd</h4>
+            <p>Deze pagina is alleen toegankelijk voor beheerders en teamverantwoordelijken.</p>
+            <a href="@Url.Action("Index", "Dashboard")" class="btn btn-primary">Terug naar Dashboard</a>
+        </div>
+    </div>
+    return;
+}
+
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="@Url.Action("ManageCandidates", "Dashboard")">Kandidaten Beheren</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Kandidaat Bewerken</li>
+        </ol>
+    </nav>
+
+    <h1 class="mb-4"><i class="bi bi-pencil-square"></i> Kandidaat Bewerken</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h2 class="h5 mb-0">Persoonlijke Gegevens</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-controller="Dashboard" asp-action="EditCandidate" asp-route-id="@Model.CandidateId" method="post">
+                        @Html.AntiForgeryToken()
+                        
+                        <input type="hidden" asp-for="CandidateId" />
+                        
+                        <div class="mb-3">
+                            <label asp-for="GivenName" class="form-label"></label>
+                            <input asp-for="GivenName" class="form-control" />
+                            <span asp-validation-for="GivenName" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="Surname" class="form-label"></label>
+                            <input asp-for="Surname" class="form-control" />
+                            <span asp-validation-for="Surname" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="BirthDate" class="form-label"></label>
+                            <input asp-for="BirthDate" class="form-control" type="date" />
+                            <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="Institution" class="form-label"></label>
+                            <input asp-for="Institution" class="form-control" />
+                            <span asp-validation-for="Institution" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="FieldOfStudy" class="form-label"></label>
+                            <input asp-for="FieldOfStudy" class="form-control" />
+                            <span asp-validation-for="FieldOfStudy" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="@Url.Action("ManageCandidates", "Dashboard")" class="btn btn-outline-secondary">Annuleren</a>
+                            <button type="submit" class="btn btn-primary">Opslaan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h2 class="h5 mb-0">Registratie Geschiedenis</h2>
+                </div>
+                <div id="registrationHistory" class="card-body">
+                    <div class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Laden...</span>
+                        </div>
+                        <p>Registraties laden...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRegistrationHistory();
+        });
+        
+        function loadRegistrationHistory() {
+            fetch(`/api/statistics/candidate/@Model.CandidateId/registrations`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const historyContainer = document.getElementById('registrationHistory');
+                    
+                    if (data.length === 0) {
+                        historyContainer.innerHTML = `
+                            <div class="alert alert-info">
+                                <i class="bi bi-info-circle"></i> Deze kandidaat heeft nog geen registraties.
+                            </div>
+                        `;
+                    } else {
+                        let html = '<div class="list-group">';
+                        
+                        data.forEach(reg => {
+                            html += `
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">${reg.tradeShowName}</h6>
+                                        <small>${new Date(reg.registeredAt).toLocaleDateString('nl-NL')}</small>
+                                    </div>
+                                    <p class="mb-1">Geïnteresseerd in: ${reg.programs.join(', ')}</p>
+                                    ${reg.notes ? `<small class="text-muted">${reg.notes}</small>` : ''}
+                                </div>
+                            `;
+                        });
+                        
+                        html += '</div>';
+                        historyContainer.innerHTML = html;
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('registrationHistory').innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-circle"></i> Er is een fout opgetreden bij het laden van registraties.
+                        </div>
+                    `;
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+}

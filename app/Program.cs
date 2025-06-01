@@ -2,6 +2,8 @@ using app.SID_in_beurzen;
 using app.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +41,28 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
+// Add Swagger for API documentation
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "SID in Beurzen - Statistics API",
+        Version = "v1",
+        Description = "Public API providing statistics about programs and trade shows",
+        Contact = new OpenApiContact
+        {
+            Name = "SID in Beurzen",
+            Email = "info@sidinbeurzen.be"
+        }
+    });
+    
+    // Use XML comments for documentation (optional - enable if you want to add XML comments)
+    // var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    // var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    // c.IncludeXmlComments(xmlPath);
+});
+
 // Authentication
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -53,10 +77,26 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
+    
+    // Enable Swagger UI in development
+    app.UseSwagger();
+    app.UseSwaggerUI(c => 
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "SID in Beurzen API v1");
+        c.RoutePrefix = "api/docs"; // Access at /api/docs
+    });
 }
 else
 {
     app.UseExceptionHandler("/Home/Error");
+    
+    // Still enable Swagger in production, but at a different URL
+    app.UseSwagger();
+    app.UseSwaggerUI(c => 
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "SID in Beurzen API v1");
+        c.RoutePrefix = "api/docs"; // Access at /api/docs
+    });
 }
 
 // Basic middleware

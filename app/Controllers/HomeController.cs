@@ -59,5 +59,60 @@ namespace app.Controllers
         {
             return View();
         }
+
+        public IActionResult Api()
+        {
+            var model = new ApiInfoViewModel
+            {
+                ApiEndpoints = new List<ApiEndpointInfo>
+                {
+                    new ApiEndpointInfo
+                    {
+                        Name = "Most chosen program (across all trade shows)",
+                        Url = Url.Action("GetMostPopularProgram", "Statistics", new { area = "Api" }, Request.Scheme),
+                        HttpMethod = "GET",
+                        Description = "Returns the program that has been selected the most times across all trade shows"
+                    },
+                    new ApiEndpointInfo
+                    {
+                        Name = "Least chosen program (across all trade shows)",
+                        Url = Url.Action("GetLeastPopularProgram", "Statistics", new { area = "Api" }, Request.Scheme),
+                        HttpMethod = "GET",
+                        Description = "Returns the program that has been selected the least times across all trade shows"
+                    },
+                    new ApiEndpointInfo
+                    {
+                        Name = "Total candidates for a trade show",
+                        Url = "/api/statistics/tradeshow/{id}/total-candidates",
+                        HttpMethod = "GET",
+                        Description = "Returns the total number of unique candidates registered for a specific trade show"
+                    },
+                    new ApiEndpointInfo
+                    {
+                        Name = "Most chosen program for a trade show",
+                        Url = "/api/statistics/tradeshow/{id}/most-popular-program",
+                        HttpMethod = "GET",
+                        Description = "Returns the most popular program for a specific trade show"
+                    },
+                    new ApiEndpointInfo
+                    {
+                        Name = "Least chosen program for a trade show",
+                        Url = "/api/statistics/tradeshow/{id}/least-popular-program",
+                        HttpMethod = "GET",
+                        Description = "Returns the least popular program for a specific trade show"
+                    },
+                    new ApiEndpointInfo
+                    {
+                        Name = "All statistics for a trade show",
+                        Url = "/api/statistics/tradeshow/{id}/all",
+                        HttpMethod = "GET",
+                        Description = "Returns all statistics (most and least popular programs, total candidates) for a specific trade show"
+                    }
+                },
+                ApiDocumentation = $"{Request.Scheme}://{Request.Host}/api/docs"
+            };
+            
+            return View(model);
+        }
     }
 }

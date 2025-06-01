@@ -1,0 +1,131 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Marketing Dashboard</h1>
+
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Opleidingen & Interesse</h5>
+                    <p class="card-text">Selecteer een opleiding om te zien welke studiekiezers hierin geïnteresseerd zijn.</p>
+                    <a href="#programSelectSection" class="btn btn-primary">
+                        <i class="bi bi-search"></i> Doorzoeken
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Statistieken per Opleiding</h5>
+                    <p class="card-text">Bekijk hoeveel studiekiezers interesse hebben getoond per opleiding en per beurs.</p>
+                    <a href="@Url.Action("ProgramStatistics", "Dashboard")" class="btn btn-primary">
+                        <i class="bi bi-bar-chart"></i> Statistieken bekijken
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Kandidaten Beheren</h5>
+                    <p class="card-text">Bewerk kandidaatgegevens of verwijder meerdere kandidaten tegelijk.</p>
+                    @if (Context.Session.GetString("GebruikerRol") == "2") // Team Lead
+                    {
+                        <a href="@Url.Action("ManageCandidates", "Dashboard")" class="btn btn-primary">
+                            <i class="bi bi-people-fill"></i> Kandidaten beheren
+                        </a>
+                    }
+                    else
+                    {
+                        <button disabled class="btn btn-secondary" title="Alleen beschikbaar voor teamverantwoordelijken">
+                            <i class="bi bi-lock"></i> Beperkte toegang
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="programSelectSection" class="card mt-5">
+        <div class="card-header bg-light">
+            <h2 class="h4 mb-0">Selecteer een Opleiding</h2>
+        </div>
+        <div class="card-body">
+            <div id="programsLoading">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Laden...</span>
+                </div>
+                <span class="ms-2">Opleidingen worden geladen...</span>
+            </div>
+            <div id="programsList" class="row row-cols-1 row-cols-md-3 g-4" style="display:none;">
+                <!-- Programs will be loaded here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPrograms();
+        });
+        
+        function loadPrograms() {
+            fetch('/api/statistics/programs')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const programsList = document.getElementById('programsList');
+                    programsList.innerHTML = '';
+                    
+                    if (data.length === 0) {
+                        programsList.innerHTML = '<div class="col-12"><div class="alert alert-info">Geen opleidingen gevonden</div></div>';
+                    } else {
+                        data.forEach(program => {
+                            const card = document.createElement('div');
+                            card.className = 'col';
+                            card.innerHTML = `
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${program.programName}</h5>
+                                        <p class="card-text text-muted">ID: ${program.programId}</p>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <a href="/dashboard/program/${program.programId}" class="btn btn-outline-primary btn-sm">
+                                            <i class="bi bi-eye"></i> Bekijk Studiekiezers
+                                        </a>
+                                    </div>
+                                </div>
+                            `;
+                            programsList.appendChild(card);
+                        });
+                    }
+                    
+                    document.getElementById('programsLoading').style.display = 'none';
+                    programsList.style.display = 'flex';
+                })
+                .catch(error => {
+                    console.error('Error fetching programs:', error);
+                    const programsList = document.getElementById('programsList');
+                    programsList.innerHTML = `
+                        <div class="col-12">
+                            <div class="alert alert-danger">
+                                <i class="bi bi-exclamation-triangle"></i> 
+                                Er is een fout opgetreden bij het laden van de opleidingen.
+                            </div>
+                        </div>
+                    `;
+                    document.getElementById('programsLoading').style.display = 'none';
+                    programsList.style.display = 'block';
+                });
+        }
+    </script>
+}

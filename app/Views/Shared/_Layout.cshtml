@@ -25,6 +25,39 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SIDinBeurs.styles.css" asp-append-version="true" />
+    <style>
+        /* Add specific fix for navigation layout */
+        #main-navigation {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        #main-navigation .nav-item {
+            display: inline-block;
+            margin: 0;
+        }
+        
+        #main-navigation .btn-group {
+            display: inline-flex;
+        }
+        
+        /* Use CSS media query with explicit escape for Razor */
+        @* This is a more reliable way to write media queries in Razor views *@
+        @@media (max-width: 768px) {
+            #main-navigation {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            #main-navigation > a,
+            #main-navigation > div,
+            #main-navigation > span,
+            #main-navigation .nav-item {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="custom-header bg-light border-bottom mb-3">
@@ -32,6 +65,7 @@
             <a class="navbar-brand fw-bold" href="/">SIDinBeurs</a>
             <nav id="main-navigation">
                 <a href="/" class="btn btn-link">Home</a>
+                <a href="/Home/Api" class="btn btn-link">API</a>
                 @if (email != null && isValidRole)
                 {
                     <!-- Debug info: @debugInfo -->
@@ -45,6 +79,15 @@
                             <a href="/Admin/CandidateManagement" class="btn btn-link">
                                 <i class="bi bi-person-badge"></i> Studiekiezers
                             </a>
+                            <a href="/Dashboard" class="btn btn-link">
+                                <i class="bi bi-graph-up"></i> Dashboard
+                            </a>
+                            <a href="/Dashboard/Statistics" class="btn btn-link">
+                                <i class="bi bi-bar-chart"></i> Statistieken
+                            </a>
+                            <a href="/Dashboard/Candidates" class="btn btn-link">
+                                <i class="bi bi-people-fill"></i> Kandidaten Beheren
+                            </a>
                         </div>
                     }
                     else if (rol == "2") // Marketing Team Lead
@@ -57,24 +100,27 @@
                                 <i class="bi bi-bar-chart"></i> Statistieken
                             </a>
                             <a href="/Dashboard/Candidates" class="btn btn-link">
-                                <i class="bi bi-person-gear"></i> Kandidaten Beheren
+                                <i class="bi bi-people-fill"></i> Kandidaten Beheren
                             </a>
                         </div>
                     }
                     else if (rol == "3") // Marketing Medewerker
                     {
-                        <div class="btn-group" id="marketing-menu">
+                        <div class="btn-group" id="lead-menu">
                             <a href="/Dashboard" class="btn btn-link">
                                 <i class="bi bi-graph-up"></i> Dashboard
                             </a>
                             <a href="/Dashboard/Statistics" class="btn btn-link">
                                 <i class="bi bi-bar-chart"></i> Statistieken
                             </a>
+                            <a href="/Dashboard/Candidates" class="btn btn-link">
+                                <i class="bi bi-people-fill"></i> Kandidaten Beheren
+                            </a>
                         </div>
                     }
                     else if (rol == "4") // Beursexposant
                     {
-                        <a href="#" class="btn btn-link" onclick="scanQR()" id="exposant-menu">
+                        <a href="/CandidateRegistration/ScanQR" class="btn btn-link" id="exposant-menu">
                             <i class="bi bi-qr-code-scan"></i> QR Scannen
                         </a>
                     }
@@ -106,15 +152,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     
-    @if (isValidRole && rol == "4") @* Only for Beursexposant *@
-    {
-        <script>
-            function scanQR() {
-                window.location.href = '/CandidateRegistration/ScanQR';
-            }
-        </script>
-    }
-
     <script>
         // Add detection for any unauthorized menu items that might have been injected
         document.addEventListener('DOMContentLoaded', function() {

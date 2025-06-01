@@ -4,43 +4,48 @@
 
 <div class="container">
     <h1>QR Code Scannen</h1>
-    
+
     <div class="row">
         <div class="col-md-6">
             <div class="card mb-4">
-                <div class="card-header">
-                    <h5>Scan QR Code</h5>
-                </div>
-                <div class="card-body">
-                    <p>In een echte toepassing zou hier de camera worden geopend om een QR code te scannen.</p>
-                    <p>Voor deze demo kunt u een van de onderstaande kandidaat-tokens gebruiken:</p>
-                    
-                    <div class="list-group">
-                        <a href="/registration/demo-token-1" class="list-group-item list-group-item-action">
-                            Kandidaat 1: demo-token-1
-                        </a>
-                        <a href="/registration/demo-token-2" class="list-group-item list-group-item-action">
-                            Kandidaat 2: demo-token-2
-                        </a>
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Camera Scanner</h5>
+                    <div>
+                        <select id="cameraSelect" class="form-select form-select-sm">
+                            <option value="">Camera selecteren...</option>
+                        </select>
                     </div>
-                    
-                    <div class="mt-4">
-                        <p class="text-muted">
-                            <small>
-                                <i class="bi bi-info-circle"></i> In een echte productie-omgeving zou dit gebruik maken 
-                                van de mobiele camera om QR-codes te scannen die op de bezoekerskaarten staan.
-                            </small>
-                        </p>
+                </div>
+                <div class="card-body text-center">
+                    <div id="scanner-container">
+                        <video id="video" style="width: 100%; max-height: 300px; background: #000;" muted></video>
+                        <canvas id="canvas" style="display: none;"></canvas>
+                        <div id="qr-result" class="mt-2"></div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div id="loadingMessage" class="alert alert-info">Camera wordt geladen...</div>
+                        <div id="errorMessage" class="alert alert-danger" style="display:none"></div>
+                        <div id="successMessage" class="alert alert-success" style="display:none"></div>
+                    </div>
+
+                    <div class="btn-group mt-3">
+                        <button id="startButton" class="btn btn-primary">
+                            <i class="bi bi-camera"></i> Start Scanner
+                        </button>
+                        <button id="stopButton" class="btn btn-secondary" style="display:none">
+                            <i class="bi bi-stop-circle"></i> Stop Scanner
+                        </button>
                     </div>
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="card-header">
                     <h5>Handmatige invoer</h5>
                 </div>
                 <div class="card-body">
-                    <form action="/registration" method="get">
+                    <form id="manualForm">
                         <div class="mb-3">
                             <label for="candidateToken" class="form-label">Kandidaat token</label>
                             <input type="text" class="form-control" id="candidateToken" name="candidateToken" placeholder="Voer token in">
@@ -50,7 +55,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
@@ -58,15 +63,242 @@
                 </div>
                 <div class="card-body">
                     <ol>
-                        <li>Scan de QR code op de lanyard van de studiekiezer</li>
-                        <li>Controleer of de gegevens correct zijn</li>
-                        <li>Selecteer de beurs waarop u zich bevindt</li>
-                        <li>Selecteer de opleidingen waarin de kandidaat interesse heeft</li>
-                        <li>Voeg eventueel opmerkingen toe</li>
-                        <li>Klik op "Registreren" om de interesse te registreren</li>
+                        <li>Klik op "Start Scanner" om de camera te activeren</li>
+                        <li>Geef toestemming om de camera te gebruiken als dat gevraagd wordt</li>
+                        <li>Richt de camera op de QR-code van de lanyard van de studiekiezer</li>
+                        <li>Houd de QR-code stil en wacht tot deze automatisch gescand wordt</li>
+                        <li>Je wordt automatisch doorgestuurd naar de registratiepagina</li>
                     </ol>
+
+                    <div class="alert alert-info mt-3">
+                        <i class="bi bi-info-circle"></i> Werkt de scanner niet? Gebruik dan de handmatige invoer om het token in te voeren.
+                    </div>
+
+                    <div class="mt-3">
+                        <h5>Demo QR codes:</h5>
+                        <div class="list-group">
+                            <a href="/registration/example123" class="list-group-item list-group-item-action">
+                                Voorbeeld Student: example123
+                            </a>
+                            <a href="/registration/jan123456" class="list-group-item list-group-item-action">
+                                Jan Janssens: jan123456
+                            </a>
+                            <a href="/registration/emma12345" class="list-group-item list-group-item-action">
+                                Emma Peeters: emma12345
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <!-- Add jsQR library for QR code scanning -->
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script>
+        // Camera scanner implementation
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const context = canvas.getContext('2d');
+            const qrResult = document.getElementById('qr-result');
+            const loadingMessage = document.getElementById('loadingMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            const cameraSelect = document.getElementById('cameraSelect');
+            const startButton = document.getElementById('startButton');
+            const stopButton = document.getElementById('stopButton');
+            const manualForm = document.getElementById('manualForm');
+
+            let scanning = false;
+            let videoStream = null;
+
+            // Get list of available cameras
+            async function getCameraList() {
+                try {
+                    const devices = await navigator.mediaDevices.enumerateDevices();
+                    const videoDevices = devices.filter(device => device.kind === 'videoinput');
+
+                    // Clear the dropdown
+                    while (cameraSelect.firstChild) {
+                        cameraSelect.removeChild(cameraSelect.firstChild);
+                    }
+
+                    // Add default option
+                    const defaultOption = document.createElement('option');
+                    defaultOption.value = '';
+                    defaultOption.text = 'Camera selecteren...';
+                    cameraSelect.appendChild(defaultOption);
+
+                    // Add camera options
+                    videoDevices.forEach((device, index) => {
+                        const option = document.createElement('option');
+                        option.value = device.deviceId;
+                        option.text = device.label || `Camera ${index + 1}`;
+                        cameraSelect.appendChild(option);
+                    });
+
+                    // If there's only one camera, select it automatically
+                    if (videoDevices.length === 1) {
+                        cameraSelect.value = videoDevices[0].deviceId;
+                    }
+
+                } catch (error) {
+                    console.error('Error getting camera list:', error);
+                    showError('Fout bij ophalen cameralijst: ' + error.message);
+                }
+            }
+
+            // Start camera with the selected device
+            async function startCamera() {
+                try {
+                    const constraints = {
+                        video: {
+                            facingMode: "environment",  // Prefer back camera on mobile
+                            width: { ideal: 1280 },
+                            height: { ideal: 720 }
+                        }
+                    };
+
+                    // If a specific camera is selected, use that one
+                    if (cameraSelect.value) {
+                        constraints.video = {
+                            deviceId: { exact: cameraSelect.value },
+                            width: { ideal: 1280 },
+                            height: { ideal: 720 }
+                        };
+                    }
+
+                    // Get media stream
+                    videoStream = await navigator.mediaDevices.getUserMedia(constraints);
+                    video.srcObject = videoStream;
+
+                    // Start playing the video
+                    video.play();
+
+                    // Set up canvas size once video is playing
+                    video.onloadedmetadata = () => {
+                        canvas.width = video.videoWidth;
+                        canvas.height = video.videoHeight;
+                    };
+
+                    // Hide loading message when video is playing
+                    video.onplaying = () => {
+                        loadingMessage.style.display = 'none';
+                        scanning = true;
+                        startButton.style.display = 'none';
+                        stopButton.style.display = 'inline-block';
+                        startScanning();
+                    };
+
+                } catch (error) {
+                    console.error('Error accessing camera:', error);
+                    showError('Kan geen toegang krijgen tot de camera: ' + error.message);
+                }
+            }
+
+            // Stop camera
+            function stopCamera() {
+                scanning = false;
+                if (videoStream) {
+                    videoStream.getTracks().forEach(track => track.stop());
+                    videoStream = null;
+                }
+                video.srcObject = null;
+                startButton.style.display = 'inline-block';
+                stopButton.style.display = 'none';
+                loadingMessage.style.display = 'block';
+                loadingMessage.textContent = 'Camera gestopt. Klik op Start Scanner om opnieuw te beginnen.';
+            }
+
+            // Scan video frame for QR codes
+            function scanVideoFrame() {
+                if (!scanning) return;
+
+                if (video.readyState === video.HAVE_ENOUGH_DATA) {
+                    // Draw the video frame to the canvas
+                    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                    // Get image data for QR code scanning
+                    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+
+                    // Scan for QR code
+                    const code = jsQR(imageData.data, imageData.width, imageData.height, {
+                        inversionAttempts: 'dontInvert',
+                    });
+
+                    // If a QR code is found
+                    if (code) {
+                        console.log('QR code detected:', code.data);
+
+                        // Show success message
+                        qrResult.innerHTML = `<strong>QR Code gevonden:</strong> ${code.data}`;
+                        successMessage.textContent = 'QR Code gescand! Je wordt doorgestuurd...';
+                        successMessage.style.display = 'block';
+
+                        // Stop scanning
+                        scanning = false;
+
+                        // Redirect to the registration page after a brief delay
+                        setTimeout(() => {
+                            window.location.href = '/registration/' + code.data;
+                        }, 1000);
+
+                        return;
+                    }
+                }
+
+                // Continue scanning
+                requestAnimationFrame(scanVideoFrame);
+            }
+
+            // Start the scanning process
+            function startScanning() {
+                qrResult.innerHTML = '';
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'none';
+                requestAnimationFrame(scanVideoFrame);
+            }
+
+            // Show error message
+            function showError(message) {
+                errorMessage.textContent = message;
+                errorMessage.style.display = 'block';
+                loadingMessage.style.display = 'none';
+            }
+
+            // Event listeners
+            startButton.addEventListener('click', startCamera);
+            stopButton.addEventListener('click', stopCamera);
+
+            // Camera selection change
+            cameraSelect.addEventListener('change', function() {
+                if (videoStream) {
+                    stopCamera();
+                    if (cameraSelect.value) {
+                        startCamera();
+                    }
+                }
+            });
+
+            // Manual form submission
+            manualForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const token = document.getElementById('candidateToken').value.trim();
+                if (token) {
+                    window.location.href = '/registration/' + token;
+                }
+            });
+
+            // Check if camera access is supported
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                // Initialize camera list
+                getCameraList();
+            } else {
+                showError('Je browser ondersteunt geen camera toegang. Gebruik de handmatige invoer of een andere browser.');
+            }
+        });
+    </script>
+}

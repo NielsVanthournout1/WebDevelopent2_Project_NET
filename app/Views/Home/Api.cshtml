@@ -1,0 +1,117 @@
+@model app.Models.ApiInfoViewModel
+@{
+    ViewData["Title"] = "Public API";
+}
+
+<div class="container">
+    <h1>Public Statistics API</h1>
+    <p class="lead">Deze pagina toont informatie over de beschikbare publieke APIs om statistieken op te vragen.</p>
+    
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>API Documentatie</h2>
+        </div>
+        <div class="card-body">
+            <p>Raadpleeg de volledige API documentatie op: <a href="@Model.ApiDocumentation" target="_blank">@Model.ApiDocumentation</a></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>Beschikbare Endpoints</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Naam</th>
+                            <th>URL</th>
+                            <th>Methode</th>
+                            <th>Beschrijving</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var endpoint in Model.ApiEndpoints)
+                        {
+                            <tr>
+                                <td>@endpoint.Name</td>
+                                <td><code>@endpoint.Url</code></td>
+                                <td><span class="badge bg-success">@endpoint.HttpMethod</span></td>
+                                <td>@endpoint.Description</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <h3>Voorbeelden</h3>
+        
+        <div class="card mb-3">
+            <div class="card-header">Meest gekozen opleiding voor beurs met ID 1</div>
+            <div class="card-body">
+                <pre><code>GET /api/statistics/tradeshow/1/most-popular-program</code></pre>
+                <p>Response voorbeeld:</p>
+                <pre><code>{
+  "programId": 3,
+  "programName": "Informatica",
+  "registrationCount": 25
+}</code></pre>
+            </div>
+        </div>
+        
+        <div class="card mb-3">
+            <div class="card-header">Minst gekozen opleiding voor beurs met ID 1</div>
+            <div class="card-body">
+                <pre><code>GET /api/statistics/tradeshow/1/least-popular-program</code></pre>
+                <p>Response voorbeeld:</p>
+                <pre><code>{
+  "programId": 5,
+  "programName": "Geschiedenis",
+  "registrationCount": 2
+}</code></pre>
+            </div>
+        </div>
+        
+        <div class="card mb-3">
+            <div class="card-header">Totaal aantal geregistreerde studiekiezers voor beurs met ID 1</div>
+            <div class="card-body">
+                <pre><code>GET /api/statistics/tradeshow/1/total-candidates</code></pre>
+                <p>Response voorbeeld:</p>
+                <pre><code>{
+  "tradeShowId": 1,
+  "tradeShowName": "SID-in West-Vlaanderen",
+  "candidateCount": 120,
+  "eventDate": "2023-01-15T00:00:00"
+}</code></pre>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Alle statistieken voor beurs met ID 1</div>
+            <div class="card-body">
+                <pre><code>GET /api/statistics/tradeshow/1/all</code></pre>
+                <p>Response voorbeeld:</p>
+                <pre><code>{
+  "tradeShowId": 1,
+  "tradeShowName": "SID-in West-Vlaanderen",
+  "eventDate": "2023-01-15T00:00:00",
+  "totalCandidateCount": 120,
+  "mostPopularProgram": {
+    "programId": 3,
+    "programName": "Informatica",
+    "registrationCount": 25
+  },
+  "leastPopularProgram": {
+    "programId": 5,
+    "programName": "Geschiedenis",
+    "registrationCount": 2
+  }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>

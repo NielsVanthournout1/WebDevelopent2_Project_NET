@@ -3,6 +3,70 @@
   "WorkspaceRootPath": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\dashboard\\editcandidate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\dashboard\\editcandidate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\dashboard\\managecandidates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\dashboard\\managecandidates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\models\\api\\statisticsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:models\\api\\statisticsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\controllers\\api\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:controllers\\api\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\dashboard\\programstatistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\dashboard\\programstatistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\dashboard\\programdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\dashboard\\programdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\candidateregistration\\scanqr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\candidateregistration\\scanqr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\services\\dataseedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:services\\dataseedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\home\\api.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\home\\api.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\models\\apiinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:models\\apiinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\candidateregistration\\registerinterest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\candidateregistration\\registerinterest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -31,24 +95,12 @@
       "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\admin\\candidatemanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\candidateregistration\\registrationconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\candidateregistration\\registrationconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\services\\dataseedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:services\\dataseedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\models\\candidateregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -127,32 +179,12 @@
       "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:sid_in_beurzen\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\candidateregistration\\scanqr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\candidateregistration\\scanqr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\models\\dashboardviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:models\\dashboardviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\models\\api\\statisticsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:models\\api\\statisticsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\controllers\\api\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:controllers\\api\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\views\\shared\\_mobilelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -169,10 +201,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\models\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:models\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF28E5E7-1934-4A92-B415-0CCAD088BA0D}|app.csproj|c:\\users\\niels\\documents\\jaar2\\semister 2\\web development 2\\project_.net\\app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -194,17 +222,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 205,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAtwJ4AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAmwC0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T14:06:31.713Z",
               "IsPinned": true,
@@ -236,80 +264,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DirectDatabaseAccessService.cs",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DirectDatabaseAccessService.cs",
-              "RelativeDocumentMoniker": "Services\\DirectDatabaseAccessService.cs",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DirectDatabaseAccessService.cs",
-              "RelativeToolTip": "Services\\DirectDatabaseAccessService.cs",
-              "ViewState": "AgIAALcAAAAAAAAAAAAkwHEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T13:43:49.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAEsCAAAAAAAAAAAAAGsCAAAJAAAAAAAAAA==",
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAcBAAAAAAAAAIAwwMYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T07:29:56.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CandidateRegistrationController.cs",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\CandidateRegistrationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CandidateRegistrationController.cs",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\CandidateRegistrationController.cs",
-              "RelativeToolTip": "Controllers\\CandidateRegistrationController.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAkwBsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T06:23:10.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegisterInterest.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\RegisterInterest.cshtml",
-              "RelativeDocumentMoniker": "Views\\CandidateRegistration\\RegisterInterest.cshtml",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\RegisterInterest.cshtml",
-              "RelativeToolTip": "Views\\CandidateRegistration\\RegisterInterest.cshtml",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAIAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T18:59:48.211Z",
+              "WhenOpened": "2025-05-31T19:00:24.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CreateCandidate.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\CreateCandidate.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\CreateCandidate.cshtml",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\CreateCandidate.cshtml",
-              "RelativeToolTip": "Views\\Admin\\CreateCandidate.cshtml",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAAAFIAAAABAAAAAAAAAA==",
+              "Title": "StatisticsDtos.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\Api\\StatisticsDtos.cs",
+              "RelativeDocumentMoniker": "Models\\Api\\StatisticsDtos.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\Api\\StatisticsDtos.cs",
+              "RelativeToolTip": "Models\\Api\\StatisticsDtos.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAnwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T19:01:11.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAkwG0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-01T12:48:04.614Z",
+              "WhenOpened": "2025-05-30T14:13:36.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManageCandidates.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\ManageCandidates.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\ManageCandidates.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\ManageCandidates.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\ManageCandidates.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T19:36:20.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditCandidate.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\EditCandidate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\EditCandidate.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\EditCandidate.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\EditCandidate.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T19:36:31.339Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "EditCandidate.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\EditCandidate.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\EditCandidate.cshtml",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\EditCandidate.cshtml",
-              "RelativeToolTip": "Views\\Admin\\EditCandidate.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-01T12:48:09.023Z",
+              "Title": "StatisticsController.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\Api\\StatisticsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Api\\StatisticsController.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\Api\\StatisticsController.cs",
+              "RelativeToolTip": "Controllers\\Api\\StatisticsController.cs",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAAAEEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T19:00:38.43Z",
               "EditorCaption": ""
             },
             {
@@ -323,32 +351,214 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "ProgramStatistics.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\ProgramStatistics.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\ProgramStatistics.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\ProgramStatistics.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\ProgramStatistics.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T19:36:11.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProgramDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\ProgramDetails.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\ProgramDetails.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\ProgramDetails.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\ProgramDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T19:36:02.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T19:35:45.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Api.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Home\\Api.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Api.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Home\\Api.cshtml",
+              "RelativeToolTip": "Views\\Home\\Api.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T18:47:41.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApiInfoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\ApiInfoViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ApiInfoViewModel.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\ApiInfoViewModel.cs",
+              "RelativeToolTip": "Models\\ApiInfoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:47:36.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T14:13:36.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ScanQR.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\ScanQR.cshtml",
+              "RelativeDocumentMoniker": "Views\\CandidateRegistration\\ScanQR.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\ScanQR.cshtml",
+              "RelativeToolTip": "Views\\CandidateRegistration\\ScanQR.cshtml",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAAAC8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T19:20:59.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataSeedService.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DataSeedService.cs",
+              "RelativeDocumentMoniker": "Services\\DataSeedService.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DataSeedService.cs",
+              "RelativeToolTip": "Services\\DataSeedService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:51:43.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RegisterInterest.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\RegisterInterest.cshtml",
+              "RelativeDocumentMoniker": "Views\\CandidateRegistration\\RegisterInterest.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\RegisterInterest.cshtml",
+              "RelativeToolTip": "Views\\CandidateRegistration\\RegisterInterest.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAIAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T18:59:48.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CandidateRegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\CandidateRegistrationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CandidateRegistrationController.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\CandidateRegistrationController.cs",
+              "RelativeToolTip": "Controllers\\CandidateRegistrationController.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAkwBsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T06:23:10.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAwHUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:19:24.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAEgCAAAAAAAAAIBJwGsCAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:29:56.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DirectDatabaseAccessService.cs",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DirectDatabaseAccessService.cs",
+              "RelativeDocumentMoniker": "Services\\DirectDatabaseAccessService.cs",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DirectDatabaseAccessService.cs",
+              "RelativeToolTip": "Services\\DirectDatabaseAccessService.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAkwHEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T13:43:49.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CreateCandidate.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\CreateCandidate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\CreateCandidate.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\CreateCandidate.cshtml",
+              "RelativeToolTip": "Views\\Admin\\CreateCandidate.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAIBJwFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T12:48:04.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EditCandidate.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\EditCandidate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EditCandidate.cshtml",
+              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\EditCandidate.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EditCandidate.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAIBJwEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T12:48:09.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "CandidateManagement.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\CandidateManagement.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\CandidateManagement.cshtml",
               "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\CandidateManagement.cshtml",
               "RelativeToolTip": "Views\\Admin\\CandidateManagement.cshtml",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAIBJwHkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-01T12:47:56.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABoAAAAAAAAAAAApwCsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-30T14:13:36.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 23,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
@@ -361,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 24,
               "Title": "RegistrationConfirmed.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\RegistrationConfirmed.cshtml",
               "RelativeDocumentMoniker": "Views\\CandidateRegistration\\RegistrationConfirmed.cshtml",
@@ -374,20 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DataSeedService.cs",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DataSeedService.cs",
-              "RelativeDocumentMoniker": "Services\\DataSeedService.cs",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DataSeedService.cs",
-              "RelativeToolTip": "Services\\DataSeedService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAABUAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T14:51:43.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 25,
               "Title": "CandidateRegistrationViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\CandidateRegistrationViewModel.cs",
               "RelativeDocumentMoniker": "Models\\CandidateRegistrationViewModel.cs",
@@ -400,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 26,
               "Title": "DatabaseFixService.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\DatabaseFixService.cs",
               "RelativeDocumentMoniker": "Services\\DatabaseFixService.cs",
@@ -408,11 +605,12 @@
               "RelativeToolTip": "Services\\DatabaseFixService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T13:37:53.779Z"
+              "WhenOpened": "2025-06-01T13:37:53.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 28,
               "Title": "CandidateViewModels.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\CandidateViewModels.cs",
               "RelativeDocumentMoniker": "Models\\CandidateViewModels.cs",
@@ -425,7 +623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 27,
               "Title": "CandidateCreated.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\CandidateCreated.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\CandidateCreated.cshtml",
@@ -438,19 +636,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 30,
               "Title": "AdminInitializationService.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\AdminInitializationService.cs",
               "RelativeDocumentMoniker": "Services\\AdminInitializationService.cs",
               "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Services\\AdminInitializationService.cs",
               "RelativeToolTip": "Services\\AdminInitializationService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFYAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAIBJwFYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T15:57:21.776Z"
+              "WhenOpened": "2025-05-31T15:57:21.776Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 29,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -463,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 32,
               "Title": "UserManagement.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\UserManagement.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\UserManagement.cshtml",
@@ -471,11 +670,12 @@
               "RelativeToolTip": "Views\\Admin\\UserManagement.cshtml",
               "ViewState": "AgIAAFEAAAAAAAAAAAAgwHQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T19:14:40.43Z"
+              "WhenOpened": "2025-05-31T19:14:40.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 31,
               "Title": "mobile.css",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\wwwroot\\css\\mobile.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\mobile.css",
@@ -483,11 +683,12 @@
               "RelativeToolTip": "wwwroot\\css\\mobile.css",
               "ViewState": "AgIAADMAAAAAAAAAAIAwwEsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-31T19:00:14.108Z"
+              "WhenOpened": "2025-05-31T19:00:14.108Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 33,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -495,11 +696,12 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAAI8AAAAAAAAAAAAswCYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:40:32.071Z"
+              "WhenOpened": "2025-05-30T14:40:32.071Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 34,
               "Title": "SetPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Account\\SetPassword.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\SetPassword.cshtml",
@@ -507,11 +709,12 @@
               "RelativeToolTip": "Views\\Account\\SetPassword.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAgwD4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T19:15:12.593Z"
+              "WhenOpened": "2025-05-31T19:15:12.593Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 35,
               "Title": "CreateUser.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\CreateUser.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\CreateUser.cshtml",
@@ -519,11 +722,12 @@
               "RelativeToolTip": "Views\\Admin\\CreateUser.cshtml",
               "ViewState": "AgIAACIAAAAAAAAAAAAqwEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T19:14:54.782Z"
+              "WhenOpened": "2025-05-31T19:14:54.782Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 36,
               "Title": "UserCreated.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Admin\\UserCreated.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\UserCreated.cshtml",
@@ -531,35 +735,38 @@
               "RelativeToolTip": "Views\\Admin\\UserCreated.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAWwDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T19:15:03.544Z"
+              "WhenOpened": "2025-05-31T19:15:03.544Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 37,
               "Title": "AdminViewModels.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\AdminViewModels.cs",
               "RelativeDocumentMoniker": "Models\\AdminViewModels.cs",
               "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\AdminViewModels.cs",
               "RelativeToolTip": "Models\\AdminViewModels.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T07:29:39.278Z"
+              "WhenOpened": "2025-06-01T07:29:39.278Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 38,
               "Title": "UserListViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\UserListViewModel.cs",
               "RelativeDocumentMoniker": "Models\\UserListViewModel.cs",
               "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\UserListViewModel.cs",
               "RelativeToolTip": "Models\\UserListViewModel.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAIAywCUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAD4vyUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T08:08:29.501Z"
+              "WhenOpened": "2025-06-01T08:08:29.501Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 39,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "Models\\LoginViewModel.cs",
@@ -567,11 +774,12 @@
               "RelativeToolTip": "Models\\LoginViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:20:20.034Z"
+              "WhenOpened": "2025-05-30T14:20:20.034Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 40,
               "Title": "AccountViewModels.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\AccountViewModels.cs",
               "RelativeDocumentMoniker": "Models\\AccountViewModels.cs",
@@ -579,11 +787,12 @@
               "RelativeToolTip": "Models\\AccountViewModels.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T07:29:48.206Z"
+              "WhenOpened": "2025-06-01T07:29:48.206Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\SID_in_beurzen\\Program.cs",
               "RelativeDocumentMoniker": "SID_in_beurzen\\Program.cs",
@@ -591,11 +800,12 @@
               "RelativeToolTip": "SID_in_beurzen\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T07:11:25.753Z"
+              "WhenOpened": "2025-06-01T07:11:25.753Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 41,
               "Title": "SidInBeurzenContext.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\SID_in_beurzen\\SidInBeurzenContext.cs",
               "RelativeDocumentMoniker": "SID_in_beurzen\\SidInBeurzenContext.cs",
@@ -608,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 43,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\SID_in_beurzen\\Account.cs",
               "RelativeDocumentMoniker": "SID_in_beurzen\\Account.cs",
@@ -616,23 +826,12 @@
               "RelativeToolTip": "SID_in_beurzen\\Account.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T19:01:27.682Z"
+              "WhenOpened": "2025-05-30T19:01:27.682Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-30T14:13:36.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 44,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\AccessDenied.cshtml",
@@ -640,24 +839,12 @@
               "RelativeToolTip": "Views\\Account\\AccessDenied.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T19:15:17.992Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ScanQR.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\ScanQR.cshtml",
-              "RelativeDocumentMoniker": "Views\\CandidateRegistration\\ScanQR.cshtml",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\CandidateRegistration\\ScanQR.cshtml",
-              "RelativeToolTip": "Views\\CandidateRegistration\\ScanQR.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T19:20:59.827Z",
+              "WhenOpened": "2025-05-31T19:15:17.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 45,
               "Title": "DashboardViewModels.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\DashboardViewModels.cs",
               "RelativeDocumentMoniker": "Models\\DashboardViewModels.cs",
@@ -665,47 +852,12 @@
               "RelativeToolTip": "Models\\DashboardViewModels.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAgwD8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T19:01:25.978Z"
+              "WhenOpened": "2025-05-31T19:01:25.978Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "StatisticsDtos.cs",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\Api\\StatisticsDtos.cs",
-              "RelativeDocumentMoniker": "Models\\Api\\StatisticsDtos.cs",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\Api\\StatisticsDtos.cs",
-              "RelativeToolTip": "Models\\Api\\StatisticsDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T19:01:11.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "StatisticsController.cs",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\Api\\StatisticsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Api\\StatisticsController.cs",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\Api\\StatisticsController.cs",
-              "RelativeToolTip": "Controllers\\Api\\StatisticsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T19:00:38.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T19:00:24.636Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 46,
               "Title": "_MobileLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Shared\\_MobileLayout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_MobileLayout.cshtml",
@@ -713,11 +865,12 @@
               "RelativeToolTip": "Views\\Shared\\_MobileLayout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T19:00:03.827Z"
+              "WhenOpened": "2025-05-31T19:00:03.827Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 49,
               "Title": "HomeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Models\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "Models\\HomeViewModel.cs",
@@ -725,11 +878,12 @@
               "RelativeToolTip": "Models\\HomeViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T16:09:48.649Z"
+              "WhenOpened": "2025-05-31T16:09:48.649Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -742,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 48,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -750,23 +904,12 @@
               "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T16:36:04.485Z"
+              "WhenOpened": "2025-05-31T16:36:04.485Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAowD4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T15:19:24.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 50,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -774,23 +917,25 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-31T15:51:32.872Z"
+              "WhenOpened": "2025-05-31T15:51:32.872Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 51,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAABUAAAAAAAAAAIBJwC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAIBZwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-30T14:10:52.674Z"
+              "WhenOpened": "2025-05-30T14:10:52.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 52,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Niels\\Documents\\jaar2\\semister 2\\Web development 2\\Project_.NET\\app\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -798,7 +943,8 @@
               "RelativeToolTip": "Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-30T14:51:36.937Z"
+              "WhenOpened": "2025-05-30T14:51:36.937Z",
+              "EditorCaption": ""
             }
           ]
         }
